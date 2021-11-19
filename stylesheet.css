@@ -1,22 +1,32 @@
-.logo {
-    width: 100%;
-    margin-bottom: 10px;
-}
-.line {
-    width: 1px;
-    height: 93%;
-    position: fixed;
-    background-image: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 4%, rgba(0,0,0,1) 96%, rgba(0,0,0,0) 100%);
-    margin-left: 14%;
-    margin-top: 2%;
-}
-.menu {
-    /* background-color: red; */
-    width: 13%;
+html, body {
     height: 100%;
-    position: fixed;
+    margin: 0px;
+    font-family: helvetica;
+}
+.profile {
+    width: 25%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    float: left;
+}
+.profile div {
+    text-align: center;
+    margin-left: 120px;
+}
+.avatar {
+    border-radius: 100%;
+    width: 150px;
 }
 .content {
-    /* background-color: blue; */
-    margin-left: 15%;
+    width: 75%;
+    float: left;
+    margin-top: 15px;
+}
+.line {
+    height: 1px;
+    width: 90%;
+    background-color: lightgray;
+    margin-top: -10px;
+    margin-bottom: 10px;
 }
