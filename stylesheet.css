@@ -14,6 +14,12 @@ html, body {
     text-align: center;
     margin-left: 120px;
 }
+.profile h1 h2 {
+    position: absolute;
+}
+.profile img {
+    position: relative;
+}
 .avatar {
     border-radius: 100%;
     width: 150px;
