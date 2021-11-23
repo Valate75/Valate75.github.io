@@ -1,12 +1,21 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+    font-family: helvetica;
+    font-size: 15px;
+}
 .container {
     background-color: lightgray;
     min-width: 40%;
     border-radius: 20px;
-    padding: 0px 5px 27px 17px;
+    padding: 0px 15px 27px 17px;
     margin: 20px;
     float: left;
 }
-.comment {
+.container pre b {
+    font-size: 17px;
+}
+.container pre span {
     color: teal;
 }
 .line {
