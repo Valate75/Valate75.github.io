@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'fontello';
+    src: url('./fontello.woff') format('woff');
+}
 html, body {
     height: 100%;
     margin: 0px;
@@ -5,16 +9,16 @@ html, body {
     font-size: 15px;
 }
 .profile {
-    width: 25%;
+    width: 15%;
     height: 100%;
     align-items: center;
     display: flex;
     float: left;
+    margin: 0px 65px 0px 50px;
+    text-align: center;
 }
 .profile div {
-    text-align: center;
-    margin-left: 120px;
-    margin-bottom: 125px;
+    margin-bottom: 100px;
 }
 .profile h1 h2 {
     position: absolute;
@@ -39,4 +43,21 @@ html, body {
     background-color: lightgray;
     margin-top: -10px;
     margin-bottom: 10px;
+}
+.socials {
+    font-family: "fontello";
+    font-size: 30px;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    user-select: none;
+}
+.socials a {
+    padding: 0px 7px 0px 7px;
+}
+.socials a:visited {
+    color: black;
+}
+.socials a:hover {
+    color: #0A59B0;
 }
