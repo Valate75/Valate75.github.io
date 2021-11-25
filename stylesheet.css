@@ -8,6 +8,13 @@ html, body {
     font-family: helvetica;
     font-size: 15px;
 }
+.line {
+    height: 1px;
+    width: 90%;
+    background-color: lightgray;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
 .profile {
     width: 15%;
     height: 100%;
@@ -36,13 +43,6 @@ html, body {
 }
 .content pre b {
     font-size: 17px;
-}
-.line {
-    height: 1px;
-    width: 90%;
-    background-color: lightgray;
-    margin-top: -10px;
-    margin-bottom: 10px;
 }
 .socials {
     font-family: "fontello";
