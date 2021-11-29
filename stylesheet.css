@@ -44,6 +44,11 @@ html, body {
 .content pre b {
     font-size: 17px;
 }
+.content a {
+    display: block;
+    padding-top: 4px;
+    color: blue;
+}
 .socials {
     font-family: "fontello";
     font-size: 30px;
