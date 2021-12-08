@@ -4,38 +4,34 @@
         <meta charset="utf-8">
         <title>Main Page</title>
         <link rel = "icon" type = "image/png" href ="https://github.githubassets.com/favicons/favicon-dark.png">
-        <link rel="stylesheet" href="stylesheet.css" type="text/css">
+        <link rel="stylesheet" href="style.css" type="text/css">
     </head>
     <body>
-        <div id="cookie-popup">
-            <div>
-                <h1>This site uses cookies</h1>
-                <span>It uses it to remember the settings you choose, like darkmode on or off. No third party cookies are used</span>
-                <button onclick="acceptCookies()">Accept</button>
-                <button onclick="denyCookies()">Deny</button>
-            </div>
-        </div>
-        <a id="up" href="#top" name="#top">
+        <a id="up" onclick="window.scrollTo(0, 0)">
             <div class="up arrow"></div>
         </a>
         <a class="icon" id="topr" href="https://github.com/Valate75" title="My GitHub profile">&#xf300;</a>
+
+        <!--Topbar-->
         <div class="topbar">
             <div class="menu">
                 <a class="active" href="/">Home</a>
 
                 <div class="dropdown-menu">
-                    <a href="#">Wiki</a>
+                    <a>Wiki</a>
                     <div class="dropdown-content">
                         <a href="https://github.com/Valate75/Cjson/wiki">CJson</a>
                         <a href="https://github.com/Valate75/SosialBot/wiki">SosialBot</a>
                     </div>
                 </div>
 
-                <a href="#">Text</a>
-                <a href="#">About Me</a>
-                <a href="#" id="darkMode" onclick="mode()">Light mode</a>
+                <a href="">Text</a>
+                <a href="">About Me</a>
+                <a onclick="mode()" id="darkMode">Light mode</a>
             </div>
         </div>
+
+        <!--Image Slider-->
         <div class="slider">
             <ul id="slideWrap" class="blur">
                 <li><img src="Images/CJson.png" alt=""></li>
@@ -45,6 +41,8 @@
               </ul>
               <h1>Welcome to my site!</h1>
         </div>
+
+        <!--Top Info-->
         <div id="topinfo">
             <a href="#">
                 <h1>Title</h1>
@@ -56,36 +54,10 @@
                 <h1>Title</h1>
             </a>
         </div>
+
         <div id="scrollPoint"></div>
         <h1>My Projects</h1>
         <div class="test"></div>
-
-
-
-
-
-
-                                            <!--Old HTML-->
-
-        <!--<div class ="profile">
-            <div>
-                <img src="https://avatars.githubusercontent.com/u/74658664?v=4" ait="avatar" class="avatar">
-                <h1 id="name">Valate75</h1>
-                <h2 style="color: lightgray;">Student and hobby programmer</h2>
-                <div class="socials">
-                    <a href="https://github.com/Valate75">&#xf300;</a>
-                    <a href="/">&#xf199;</a>
-                </div>
-            </div>
-        </div>
-        <div class="content">
-            <h3>Main Page</h3>
-            <div class="line"></div>
-            <pre id="info"></pre>
-            <h3>Wikis</h3>
-            <a href="https://github.com/Valate75/Cjson/wiki">CJson</a>
-            <a href="https://github.com/Valate75/SosialBot/wiki">SosialBot</a>
-        </div>-->
         <script src="script.js" defer></script>
     </body>
 </html>

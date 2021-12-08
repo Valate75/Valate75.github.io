@@ -13,41 +13,46 @@ function imageSlider()
     // Change Image
     setInterval(function()
     {
-        if(count < pictureAmt)
+        if (count < pictureAmt)
         {
             slideList.style.left = "-" + count * window.innerWidth + "px";
             count++;
         }
-        else if(count = pictureAmt)
+        else if (count = pictureAmt)
         {
             slideList.style.left = "0px";
             count = 1;
         }
     }, 5000);
 }
-// On Start
-window.onload = function()
+
+// Change mode
+function mode()
 {
-    if(getCookie("accepted") != "true") document.getElementById("cookie-popup").style.display = "block";
-    if(getCookie("darkmode") == "true")
-    {
-        document.body.style.color = "white";
-        document.body.style.backgroundColor = "#0B0C0F";
-        document.getElementById("darkMode").innerText = "Dark mode";
-        document.getElementById("topinfo").style.backgroundColor = "#0B0C0F";
+    if (document.body.style.color == "white")
+        modeChange("black", "white", "Light mode");
+    else
+        modeChange("white", "#0C0C17", "Dark mode");
+}
 
-        var links = document.links
-        for (let i = 0; i < links.length; i++)
-            links[i].style.color = "white";
-        document.getElementById("topr").style.color = "black";
+function modeChange(c1, c2, title)
+{
+    document.body.style.color = c1;                                                 // Change the text color
+    document.body.style.backgroundColor = c2;                                       // Change the background colour
+    document.getElementById("darkMode").innerText = title;                          // Change title
 
-        darkmode = true;
-    }
-    imageSlider();
+    for (let i = 0; i < document.querySelectorAll("a").length; i++)                 // change all links text colour
+            document.querySelectorAll("a")[i].style.color = c1;
+
+    if (c2 != "white") document.getElementById("topinfo").style.backgroundColor = "#1D1F28";
+    else document.getElementById("topinfo").style.backgroundColor = c2;             // Change the top info's background
+
+    document.getElementById("topr").style.color = "black";                          // Change back the github link to black
 }
 
 // Scroll Event
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function()
+{
     var scrollPoint = document.getElementById("scrollPoint").getBoundingClientRect().top;
     if (scrollPoint < window.innerHeight)
         document.getElementById("up").style.display = "block"
@@ -55,39 +60,13 @@ window.addEventListener("scroll", function() {
         document.getElementById("up").style.display = "none"
 });
 
-var darkMode = false;
-function mode() {
-    darkMode = !darkMode
-    if(darkMode)
-    {
-        document.body.style.color = "white";
-        document.body.style.backgroundColor = "#0B0C0F";
-        document.getElementById("darkMode").innerText = "Dark mode";
-        document.getElementById("topinfo").style.backgroundColor = "#0B0C0F";
-
-        var links = document.links
-        for (let i = 0; i < links.length; i++)
-            links[i].style.color = "white";
-        document.getElementById("topr").style.color = "black";
-
-        if(getCookie("accepted") == "true") document.cookie = "darkmode=true";
-    }
-    else
-    {
-        document.body.style.color = "black";
-        document.body.style.backgroundColor = "white";
-        document.getElementById("darkMode").innerText = "Light mode";
-        document.getElementById("topinfo").style.backgroundColor = "white";
-
-        var links = document.links
-        for (let i = 0; i < links.length; i++)
-            links[i].style.color = "black";
-
-        if(getCookie("accepted") == "true") document.cookie = "darkmode=false;";
-    }
+// On Load
+window.onload = function()
+{
+    imageSlider();
 }
 
-function denyCookies()
+/*function denyCookies()
 {
     document.getElementById("cookie-popup").style.display = "none";
 }
@@ -112,29 +91,4 @@ function getCookie(cname) {
       }
     }
     return "";
-}
-
-/*
-// Name And Username
-fetch('https://api.github.com/users/Valate75', {
-    headers: {'Accept' : 'application/vnd.github.v3+json'}})                                        // Fetch Data from GitHub
-   .then( response => response.json())                                                              // Converting the response to a JSON object
-   .then( data => document.getElementById('name').textContent = `${data.login} (${data.name})`)     // send data to the HTML
-   .catch( error => console.error(error));                                                          // Catch Errors
-
-// Readme.md
-fetch('https://raw.githubusercontent.com/Valate75/Valate75/main/README.md')                         // Fetch Data from GitHub
-    .then( response => response.text())                                                             // Converting the response to text
-    .then( data => {                                                                                // Edit text
-            let bc = false; let text = "";
-            for(let i = 0; i < data.length; i++) // Convert the md # to HTML bold
-            {
-                char = data.charAt(i)
-                if(char == '#') { char = "<h3>"; i++; bc = !bc; }
-                else if(char == '\n' && bc) { char = "</h3>"; i--; bc = !bc; }
-                text += char;
-            }
-            document.getElementById('info').innerHTML = text                                        // Send text to the HTML
-        })
-    .catch( error => console.error(error));                                                         // Catch Errors
-*/
+}*/
