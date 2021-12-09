@@ -41,11 +41,17 @@ function modeChange(c1, c2, title)
     document.body.style.backgroundColor = c2;                                       // Change the background colour
     document.getElementById("darkMode").innerText = title;                          // Change title
 
-    for (let i = 0; i < document.querySelectorAll("a").length; i++)                 // change all links text colour
+    // change all links text colour
+    for (let i = 0; i < document.querySelectorAll("a").length; i++)
             document.querySelectorAll("a")[i].style.color = c1;
+    
+    // change all .line colours
+    for (let i = 0; i < document.getElementsByClassName("line").length; i++)
+        document.getElementsByClassName("line")[i].style.backgroundColor = c1;
 
+    // Change the top info's background
     if (c2 != "white") document.getElementById("topinfo").style.backgroundColor = "#1D1F28";
-    else document.getElementById("topinfo").style.backgroundColor = c2;             // Change the top info's background
+    else document.getElementById("topinfo").style.backgroundColor = c2;
 
     document.getElementById("topr").style.color = "black";                          // Change back the github link to black
 }
