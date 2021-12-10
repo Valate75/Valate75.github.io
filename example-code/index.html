@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Example Code</title>
+        <link rel = "icon" type = "image/png" href ="https://github.githubassets.com/favicons/favicon-dark.png">
+        <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    <body>
+        <a class="icon" id="topr" href="https://github.com/Valate75" title="My GitHub profile">&#xf300;</a>
+        <div class="topbar">
+            <div class="menu">
+                <a href="../">Home</a>
+
+                <div class="dropdown-menu">
+                    <a>Wiki</a>
+                    <div class="dropdown-content">
+                        <a href="https://github.com/Valate75/Cjson/wiki">CJson</a>
+                        <a href="https://github.com/Valate75/SosialBot/wiki">SosialBot</a>
+                    </div>
+                </div>
+
+                <a class="active" href="/">Example Code</a>
+                <a href="">About Me</a>
+                <a onclick="mode()" id="darkMode">Light mode</a>
+            </div>
+        </div>
+        <h1>CJson</h1>
+        <div class="container">
+            <pre>
+    <span style="color: #438A55">// Setup</span>
+    if (!fe("data.json") || jsonEmpty("data.json"))                             <span style="color: #438A55">// Check if the json already exsists</span>
+    {
+        wjsonClear("data.json");                                                <span style="color: #438A55">// Creates a Json file (will clear it if it already exsists)</span>
+        wJsonAppend("data.json", "Data 1", "0");                                <span style="color: #438A55">// Appends "Data 1" with the value "0"</span>
+        wJsonAppend("data.json", "Data 2", "true");                             <span style="color: #438A55">// Appends "Data 2" with the value "true"</span>
+    }
+    char ***json = rJson("data.json");                                          <span style="color: #438A55">// Reads the Json and puts it into ***json for use later</span>
+
+    <span style="color: #438A55">// Edit</span>
+    if (condition)
+    {
+        wJsonEdit("data.json", rJsonFindInd("data.json", "Data 1"), "1");       <span style="color: #438A55">// Change the Data 1's value to be "1"</span>
+    }
+            </pre>
+        </div>
+    </body>
+</html>

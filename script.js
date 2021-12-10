@@ -59,6 +59,7 @@ function modeChange(c1, c2, title)
 // Scroll Event
 window.addEventListener("scroll", function()
 {
+    // Scroll to top
     var scrollPoint = document.getElementById("scrollPoint").getBoundingClientRect().top;
     if (scrollPoint < window.innerHeight)
         document.getElementById("up").style.display = "block"
